@@ -4,7 +4,7 @@ Launch with Live Server VS Code extension or minimal python server.
 This will be fixed soon.
 
 ## Preview
-![Dashboard preview](dashboard_overview.png)
+![Dashboard preview](dashboard_preview.png)
 
 
 
