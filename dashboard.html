@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Olympic Games</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nouislider.min.css">
+  <script src="script.js"></script>
+  <script src="nouislider.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+
+<body onload="init()">
+
+  <div id="viz-top-tab">
+
+    <div id="project-title">
+      The Olympic Games
+    </div>
+
+    <div class="headerDivider"></div>
+
+    <div id="viz-filter-sex">
+      <input class="input-sex" type="radio" name="sexToggle" value="Male" checked> <label>Male</label>
+      <input class="input-sex" type="radio" name="sexToggle" value="Female"> <label>Female</label>
+    </div>
+
+    <div class="headerDivider"></div>
+
+    <div id="viz-filter-sport-event">
+      <select id="dropdown">
+        <option> --- All Sports (Slow!) --- </option>
+      </select>
+      <select id="eventDropdown">
+        <option> --- All Events --- </option>
+      </select>
+    </div>
+
+    <div class="headerDivider"></div>
+
+    <span id="curr-selected-country-title"> Currently selected country:</span>
+    <div class="search">
+      <input name="searchSingle" type="text" class="searchTerm" placeholder="e.g: Italy" value="Portugal">
+      <!--<button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button> -->
+    </div>
+
+  </div>
+
+  <div id="all-viz-container">
+
+    <div id="barchart-container">
+      <span class="viztitle"> Top 5 Performing Athletes</span>
+      <div id="barchartDiv"><svg id="vi1" style="height: 320px; width:500px"></svg></div>
+
+      <span class="viztitle-ac"> Athlete Characteristics </span>
+      <input type="button" value="Show participants" class="participantsToggle">
+      <div id="parCordDiv"> <svg id="vi4" style="height: 360px; width:550px"></svg> </div>
+    </div>
+
+    <div id="treemap-container">
+
+
+
+      <!-- <div id="countries-medals-button" class="viztitleblock"> Countries by total medals </div> ! --> <!-- Antes era class="viztitle" ! -->
+
+      <div id="treemap-buttons">
+        <div id="multiple-countries-button" class="treeMapButton selected"> Countries by total medals </div>
+        <div id="single-country-button" class="treeMapButton"> Single Country Explorer  </div>
+      </div>
+
+
+      <div id="treemap-title"> <span id="curr-country"></span><span id="curr-sport"></span></div>
+      <div id="treeMapDiv"> <svg id="vi5" style="height: 550px; width:700px"></svg> </div>
+
+    </div>
+
+  <div id="linechart-container">
+
+      <div class="viztitle"> Countries compared by
+        <div class="dropdown">
+          <button class="dropbtn">total medals per million population</button>
+          <div class="dropdown-content">
+            <a id="0" onclick="changeLineChartMode(this.id)">total medals</a>
+            <a id="1" onclick="changeLineChartMode(this.id)">total medals per million population</a>
+            <a id="2" onclick="changeLineChartMode(this.id)">total medals per billion GDP</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="linechartDiv"> <svg id="vi6" style="height: 300px; width:600px"></svg> </div>
+
+
+      <div id="selected-countries-container">
+        
+      <div class="search">
+        <span>Add a country to the chart:</span>
+        <input name="searchMultiple" type="text" class="searchTerm" placeholder="e.g: Italy">
+        <!--<button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button> -->
+      </div>
+        <ul>
+          <li> United States <strong>X</strong></li>
+          <li> Jamaica <strong>X</strong></li>
+          <li> Portugal <strong>X</strong></li>
+        </ul>
+
+      </div>
+
+      <img src="ist.png" alt="IST Logo" >
+
+    </div>
+
+  </div>
+
+
+  <div id="slider-container">
+    <div id="slider"></div>
+  </div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,496 @@
+body {
+    font-family: sans-serif;
+    /*background-color: #e8e8e8;*/
+    background-color: #e6f3ff;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+#all-viz-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 98%;
+    /*border: 1px solid darkblue;*/
+}
+
+#selected-countries-container {
+    border: 1px solid gray;
+    background-color:  #f1f1f1 ;
+    border-radius: 14px;
+    margin: auto;
+    width: 500px;
+    height: 150px;
+    
+}
+
+#selected-countries-container ul {
+    list-style: none;
+}
+
+#selected-countries-container li {
+    padding: 7px;
+    display: inline-block;
+    border-radius: 14px;
+    font-size: 12px;
+}
+
+#selected-countries-container li:hover {
+    background-color: red;
+    color: black;
+    cursor: pointer;
+    border: 3px solid red;
+}
+
+.treeMapButton {
+    text-align:center;
+    padding: 5px;
+    width: 220px;
+    background-color: #E9E9ED;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+    font-weight: bold;
+    display: inline-block;
+    opacity: 40%;
+}
+
+.treeMapButton:hover {
+    color:white;
+    background-color: black;
+    opacity: 100%;
+}
+
+.selected {
+    opacity: 100%;
+}
+
+
+#treemap-buttons {
+    display: table;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+#all-viz-container > div {
+    /*border: 1px solid red;*/
+}
+
+#viz-top-tab {
+    /*border: 1px solid red; */
+    background-color: white;
+    border-radius: 25px;
+    height: 50px;
+    margin-bottom: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+#parallel-coords-container {
+    /*border: 1px solid blue;*/
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 450px;
+}
+
+#barchart-container {
+    /*border: 1px solid black;*/
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 550px;
+    height: 750px;
+}
+
+#treemap-container {
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 700px;
+    height: 750px;
+}
+
+#linechart-container {
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 550px;
+    height: 750px;
+}
+
+.viztitle {
+    display: table;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.viztitle-ac {
+    display: table;
+    margin: 0 auto;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.viztitleblock {
+    display: inline-block;
+    font-weight: bold;
+}
+
+#project-title {
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 30px;
+}
+
+#viz-filter-sex {
+    display: inline-block;
+    margin-left: 50px;
+
+}
+
+.headerDivider {
+    margin-left: 50px;
+    border-left:1px solid #38546d; 
+    border-right:1px solid #16222c; 
+    height:35px;
+    display: inline-block;
+    opacity: 20%;
+    vertical-align: middle
+}
+
+#curr-selected-country-title {
+    margin-left: 50px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.input-sex {
+    display: inline-block;
+}
+
+#viz-filter-sport-event {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#barchartDiv {
+    /*display:inline-block;*/
+}
+
+#parCordDiv {
+    /*display:inline-block;*/
+}
+
+#treeMapDiv {
+    /*display:inline-block;*/
+}
+
+#slider-container {
+    /*background-color: white;*/
+    /* border: 1px solid orange; */
+    text-align: center;
+    width: 1400px;
+    margin: auto;
+    height: 60px;
+    padding: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 20px;
+    padding-top: 40px;
+    /*border: 1px solid black;*/
+
+}
+
+/* DROPDOWN */
+
+.dropbtn {
+    /* background-color: #4CAF50; */
+    /* color: white; */
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: black;
+    color: white;
+}
+
+.participantsToggle {
+    padding: 5px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    display: inline-block;
+}
+
+.participantsToggle:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Search bar */
+
+.search {
+    text-align: center;
+    margin: 5px;
+    width: 200px;
+    /* display: table;
+    margin: 0 auto; */
+    display: inline-block;
+}
+  
+.searchTerm {
+    width: 100%;
+    border: 2px solid black;
+    padding: 5px;
+    height: 20px;
+    border-radius: 15px;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: black;
+}
+
+
+
+#treemap-title {
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 19px;
+}
+
+#curr-country {
+    background-color: #E9E9ED;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+}
+
+#curr-country:hover {
+    background-color: black;
+    color: white;
+}
+
+#curr-sport {
+
+}
+  
+  
+
+
+/* TOOLTIPS ---------------------------------------------------------------------------------------- */
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 90px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+div.tooltipBarChart {
+    position: absolute;
+    text-align: center;
+    width: 170px;
+    height: 75px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+div.tooltipLineChart {
+    position: absolute;
+    text-align: center;
+    width: 230px;
+    height: 45px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+div.tooltipTreeMap {
+    position: absolute;
+    text-align: center;
+    width: 170px;
+    height: 75px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+div.tooltipTreeMap1 {
+    position: absolute;
+    text-align: center;
+    width: 170px;
+    height: 75px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+div.tooltipTreeMap2 {
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    height: 95px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+#dropdown{
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+    min-height: 2em;
+    max-height: 2em;
+    overflow: hidden;
+    top: -0.25em;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    color: black;
+    outline: none;
+    border: 0.06em solid transparent;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#eventDropdown{
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+    min-height: 2em;
+    max-height: 2em;
+    overflow: hidden;
+    top: -0.25em;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    color: black;
+    outline: none;
+    border: 0.06em solid transparent;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+#eventDropdown {
+    width: 300px;
+}
+
+#dropdown option{
+    background-color: #f9f9f9;
+}
+
+
+#eventDropdown option{
+    background-color: #f9f9f9;
+
+}
+
+svg {
+    font: 10px sans-serif;
+}
+
+/* PARALLEL COORDS ---------------------------------------------------------------------------------------- */
+
+.background path {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+}
+
+.foreground path {
+    fill: none;
+    stroke: steelblue;
+}
+
+.brush .selection {
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+    cursor: move;
+}
